@@ -28,4 +28,15 @@ in
       hm-switch = "home-manager switch";
     };
   };
+
+  # Git configuration
+  programs.git = {
+    enable = true;
+    userEmail = "vincent@vwong.dev";
+    userName = "Vincent Wong";
+    extraConfig = {
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
+    };
+  };
 }
